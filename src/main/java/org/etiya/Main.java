@@ -155,7 +155,7 @@ public class Main {
         cancelButton.click();
         Thread.sleep(1000); // Butona tıkladıktan sonra beklemek için
 
-        // "Checkout" butonuna tıklamak için elementi bulma
+        // "Checkout" ile tekrardan kişisel bilgi alanına girme
         WebElement checkoutButtonCancel = webDriver.findElement(By.xpath("//a[@class='btn_action checkout_button'][@href='./checkout-step-one.html']"));
         checkoutButtonCancel.click();
         Thread.sleep(2000); // Checkout adımına geçiş yapılırken bekleyin
@@ -194,23 +194,14 @@ public class Main {
         // "CANCEL" butonuna tıklamak için elementi bulma ve tıklama
         WebElement cancelButtonFinish = webDriver.findElement(By.cssSelector("a.cart_cancel_link.btn_secondary"));
         cancelButtonFinish.click();
-        Thread.sleep(1000); // İşlem sırasında beklemek için
+        Thread.sleep(2000); // İşlem sırasında beklemek için
+
 
         ///// SON SEPET EKRANINDA FİNİSH /////
         // "FINISH" butonuna tıklamak için elementi bulma ve tıklama
         WebElement finishButton = webDriver.findElement(By.cssSelector("a.btn_action.cart_button"));
         finishButton.click();
         Thread.sleep(2000); // İşlem sırasında beklemek için
-
-
-
-
-
-
-
-
-
-
 
         // Test sonrası tarayıcıyı kapat
         //webDriver.quit();
